@@ -1,7 +1,7 @@
 // The Swift Programming Language
 // https://docs.swift.org/swift-book
 
-import Logging
+public import Logging
 
 private let unspecifiedSubsystem = "unspecified"
 let logCategoryMetadataKey = "log-category"

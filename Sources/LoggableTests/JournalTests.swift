@@ -1,6 +1,7 @@
 private import DateTestHelpers
 import Foundation
 @testable import Loggable
+import Logging
 import Testing
 
 fileprivate func entry(date: Date, text: String) -> Journal.Entry {

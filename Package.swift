@@ -21,10 +21,16 @@ let package = Package(name: "Loggable",
 					  	.target(name: "Loggable",
 								  dependencies: [
 								  	.product(name: "Logging", package: "swift-log"),
+								  ],
+								  swiftSettings: [
+								  	.enableExperimentalFeature("MemberImportVisibility"),
 								  ]),
 					  	.testTarget(name: "LoggableTests",
 									  dependencies: [
 									  	"Loggable",
 									  	"DateTestHelpers",
+									  ],
+									  swiftSettings: [
+									  	.enableExperimentalFeature("MemberImportVisibility"),
 									  ]),
 					  ])

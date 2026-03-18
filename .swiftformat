@@ -18,5 +18,9 @@
 --disable hoistTry
 --disable conditionalAssignment
 --disable redundantStaticSelf
+--disable wrapPropertyBodies
+--disable wrapFunctionBodies
+--disable docComments
+--disable swiftTestingTestCaseNames
 --enable acronyms
 --enable numberFormatting

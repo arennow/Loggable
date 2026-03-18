@@ -1,8 +1,8 @@
+private import DateTestHelpers
+import Foundation
 @testable import Loggable
 import Logging
 import Testing
-private import DateTestHelpers
-import Foundation
 
 struct TextLogHandlerTests {
 	@Test func lineFormat() {

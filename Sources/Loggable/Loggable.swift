@@ -22,9 +22,7 @@ public extension Loggable {
 	}
 
 	static var logger: Logger {
-		var l = Logger(label: Self.loggerSubsystem)
-		l[metadataKey: logCategoryMetadataKey] = .string(Self.loggerCategory)
-		return l
+		Logger.with(subsystem: Self.loggerSubsystem, category: Self.loggerCategory)
 	}
 }
 
@@ -52,6 +50,12 @@ public enum LoggableSetup {
 }
 
 public extension Logger {
+	static func with(subsystem: String, category: String) -> Self {
+		var l = Logger(label: subsystem)
+		l[metadataKey: logCategoryMetadataKey] = .string(category)
+		return l
+	}
+
 	func tryOrLog<R>(message: String, action: () throws -> R?) -> R? {
 		do {
 			return try action()

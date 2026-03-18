@@ -31,7 +31,7 @@ public enum LoggableSetup {
 		LoggingSystem.bootstrap { label in
 			var handlers = Array<any LogHandler>()
 
-			#if canImport(os) && DEBUG
+			#if canImport(os)
 				handlers.append(OSLogHandler(label: label))
 			#else
 				handlers.append(TextLogHandler(label: label))
